@@ -1,212 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="NERV — premium medical wear, scrubs and lab coats from Aleppo, Syria." />
+  <meta name="description" content="NERV premium medical scrubs and lab coats in Aleppo, Syria." />
   <title>NERV — Medical Wear</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="bg-orb orb-1"></div>
-  <div class="bg-orb orb-2"></div>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="NERV home">
-        <img src="assets/logo-mark.png" alt="NERV logo mark" />
-        <div>
-          <span class="brand-name">NERV</span>
-          <span class="brand-tag">Synapes Everything</span>
-        </div>
-      </a>
-
-      <button id="menuToggle" class="menu-toggle" aria-label="Open menu">☰</button>
-
-      <nav id="siteNav" class="site-nav">
-        <a href="#collections">Collections</a>
-        <a href="#quality">Quality</a>
-        <a href="#lookbook">Lookbook</a>
-        <a href="#campaigns">Campaigns</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="NERV home">
+      <img src="assets/logo-mark.jpg" alt="NERV logo" />
+      <span class="brand-copy"><strong>NERV</strong><small>Synapes Everything</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    <nav class="site-nav" id="siteNav"><a class="active" href="index.html" data-i18n="nav_home"></a><a class="" href="catalog.html" data-i18n="nav_catalog"></a><a class="" href="about.html" data-i18n="nav_about"></a><a class="" href="contact.html" data-i18n="nav_contact"></a></nav>
+    <div class="header-actions">
+      <button class="lang-toggle" data-lang-toggle type="button">AR</button>
+      <a class="header-order" href="#" data-whatsapp data-i18n="order_now"></a>
     </div>
-  </header>
-
-  <main id="top">
-    <section class="hero container">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">NERV / MEDICAL WEAR</p>
-        <h1>Medical wear with a sharper identity.</h1>
-        <p class="lead">من السكربات اليومية إلى المراييل الطبية بتفاصيلها الخاصة، تقدم <strong>NERV</strong> هوية بصرية واضحة، جودة ملفتة، وتصميماً يترك انطباعاً من أول نظرة.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#collections">Explore Collection</a>
-          <a class="button button-secondary" href="https://www.instagram.com/nerv_scrubs/" target="_blank" rel="noopener">Instagram Page</a>
-        </div>
-        <div class="hero-meta">
-          <div><span class="meta-label">Based in</span><strong>Aleppo, Syria</strong></div>
-          <div><span class="meta-label">Available sizes</span><strong>M · L · XL</strong></div>
-          <div><span class="meta-label">Signature line</span><strong>Details is our Quality</strong></div>
-        </div>
-      </div>
-
-      <div class="hero-media reveal">
-        <div class="hero-card hero-card-large">
-          <img src="assets/hero-standing.webp" alt="NERV white medical lab coat" />
-        </div>
-        <div class="hero-stack">
-          <div class="hero-card"><img src="assets/black-scrub.jpg" alt="NERV black men's scrub" /></div>
-          <div class="hero-card hero-logo-card">
-            <img src="assets/logo-story.webp" alt="NERV identity story" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="strip">
-      <div class="container strip-inner">
-        <span>Quality is our Work</span>
-        <span>Special Design</span>
-        <span>High Quality Cloth</span>
-        <span>Details is our Quality</span>
-        <span>Scrubs & Lab Coats</span>
-      </div>
-    </section>
-
-    <section id="collections" class="section container">
-      <div class="section-heading reveal">
-        <p class="eyebrow">COLLECTIONS</p>
-        <h2>Built around clean silhouettes and strong details.</h2>
-        <p>الهوية العامة للعلامة تميل إلى الأسود، الأبيض، والتفاصيل الهادئة مع لمسات لونية منتقاة — لتظهر المنتجات بشكل عصري وأنيق بدلاً من الشكل الطبي التقليدي.</p>
-      </div>
-
-      <div class="collection-grid">
-        <article class="collection-card reveal">
-          <div class="collection-image"><img src="assets/black-scrub.jpg" alt="Men's black scrub" /></div>
-          <div class="collection-copy">
-            <span class="kicker">01 / MEN'S SCRUBS</span>
-            <h3>Confident everyday scrubs.</h3>
-            <p>قصّة نظيفة وعملية مع حضور بصري قوي، تعكس شخصية العلامة بأبسط شكل.</p>
-          </div>
-        </article>
-
-        <article class="collection-card reveal">
-          <div class="collection-image"><img src="assets/pink-set.jpg" alt="Women's scrub set" /></div>
-          <div class="collection-copy">
-            <span class="kicker">02 / WOMEN'S SCRUBS</span>
-            <h3>Soft tones, refined fit.</h3>
-            <p>تصاميم نسائية بألوان هادئة وتفصيل يوازن بين الراحة والأناقة.</p>
-          </div>
-        </article>
-
-        <article class="collection-card reveal">
-          <div class="collection-image"><img src="assets/purple-set.webp" alt="Purple lab coat set" /></div>
-          <div class="collection-copy">
-            <span class="kicker">03 / MEDICAL LAB COATS</span>
-            <h3>Lab coats with signature details.</h3>
-            <p>مراييل طبية بتفاصيل خاصة، وخط تصميم يبتعد عن النمط التقليدي لصالح شكل أكثر أناقة.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="quality" class="section quality-section">
-      <div class="container quality-grid">
-        <div class="quality-copy reveal">
-          <p class="eyebrow">QUALITY</p>
-          <h2>Every detail is part of the product story.</h2>
-          <p>الصور والمواد المرسلة تبرز بوضوح أن NERV لا تبيع منتجاً طبياً فقط، بل تقدّم ستايل واضح: خامة جيدة، تفاصيل نظيفة، ورسالة بصرية فاخرة ومباشرة.</p>
-          <div class="quality-points">
-            <div><strong>Special Design</strong><span>قصّات مدروسة ولمسات مختلفة عن الشكل المعتاد.</span></div>
-            <div><strong>High Quality Cloth</strong><span>التركيز في الخطاب الإعلاني على الخامة والجودة.</span></div>
-            <div><strong>Details is our Quality</strong><span>تفاصيل الخياطة واللوجو والعرض جزء أساسي من الهوية.</span></div>
-          </div>
-        </div>
-
-        <div class="quality-collage reveal">
-          <figure class="panel panel-tall"><img src="assets/hero-clipboard.webp" alt="Doctor with clipboard wearing lab coat" /></figure>
-          <figure class="panel"><img src="assets/detail-tag.jpg" alt="Lab coat detail" /></figure>
-          <figure class="panel"><img src="assets/detail-arabic.jpg" alt="Arabic promotional detail for lab coat" /></figure>
-        </div>
-      </div>
-    </section>
-
-    <section id="lookbook" class="section container">
-      <div class="section-heading reveal">
-        <p class="eyebrow">LOOKBOOK</p>
-        <h2>A visual mix of product, editorial mood, and brand campaigns.</h2>
-      </div>
-
-      <div class="lookbook-grid reveal">
-        <div class="look-card tall"><img src="assets/xray-look.webp" alt="NERV lab coat campaign image" /></div>
-        <div class="look-card"><img src="assets/purple-set.webp" alt="Purple set" /></div>
-        <div class="look-card"><img src="assets/pink-set.jpg" alt="Pink set" /></div>
-        <div class="look-card wide"><img src="assets/labcoat-back.webp" alt="Back of white lab coat" /></div>
-        <div class="look-card"><img src="assets/hero-standing.webp" alt="Standing white coat model" /></div>
-        <div class="look-card"><img src="assets/hero-clipboard.webp" alt="Doctor writing on clipboard" /></div>
-      </div>
-    </section>
-
-    <section id="campaigns" class="section container">
-      <div class="section-heading reveal">
-        <p class="eyebrow">CAMPAIGNS</p>
-        <h2>Promotional visuals that already define the brand voice.</h2>
-      </div>
-      <div class="campaign-grid">
-        <div class="campaign-card reveal"><img src="assets/poster-order-ar.webp" alt="Order medical coat in Arabic" /></div>
-        <div class="campaign-card reveal"><img src="assets/poster-order-en.webp" alt="Order medical lab coat" /></div>
-        <div class="campaign-card reveal"><img src="assets/promo-sale.jpg" alt="15 percent sale campaign" /></div>
-      </div>
-    </section>
-
-    <section class="quote-section">
-      <div class="container quote-box reveal">
-        <p class="quote-mark">“</p>
-        <blockquote>NERV is your best choice.</blockquote>
-        <p class="quote-caption">A premium, high-contrast identity for scrubs and medical lab coats.</p>
-      </div>
-    </section>
-
-    <section id="contact" class="section container contact-section">
-      <div class="contact-card reveal">
-        <div class="contact-copy">
-          <p class="eyebrow">CONTACT</p>
-          <h2>Ready to test the brand live?</h2>
-          <p>للطلبات والاستفسارات، أفضل نقطة اتصال حالياً هي صفحة الإنستغرام الخاصة بالعلامة. يمكنك لاحقاً إضافة واتساب أو نموذج طلب مباشر بسهولة.</p>
-          <div class="contact-actions">
-            <a class="button button-primary" href="https://www.instagram.com/nerv_scrubs/" target="_blank" rel="noopener">Open Instagram</a>
-            <a class="button button-secondary" href="#top">Back to top</a>
-          </div>
-        </div>
-        <div class="contact-visual">
-          <img src="assets/logo-story.webp" alt="NERV identity" />
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="brand footer-brand">
-        <img src="assets/logo-mark.png" alt="NERV logo mark" />
-        <div>
-          <span class="brand-name">NERV</span>
-          <span class="brand-tag">Synapes Everything</span>
-        </div>
-      </div>
-      <p>© NERV — Medical Wear / Aleppo, Syria</p>
-      <a href="https://www.instagram.com/nerv_scrubs/" target="_blank" rel="noopener">@nerv_scrubs</a>
-    </div>
-  </footer>
-
-  <div id="lightbox" class="lightbox" aria-hidden="true">
-    <button id="lightboxClose" class="lightbox-close" aria-label="Close image">×</button>
-    <img id="lightboxImage" src="" alt="Expanded gallery image" />
   </div>
+</header>
+<main>
+  <section class="home-hero">
+    <div class="container home-hero-grid">
+      <div class="home-hero-copy reveal">
+        <p class="eyebrow" data-i18n="home_eyebrow"></p>
+        <h1 data-i18n="home_title"></h1>
+        <p class="hero-lead" data-i18n="home_lead"></p>
+        <div class="button-row">
+          <a class="button primary" href="catalog.html" data-i18n="explore_catalog"></a>
+          <a class="button secondary" href="#" data-whatsapp data-i18n="order_whatsapp"></a>
+        </div>
+        <div class="hero-facts">
+          <div><span data-i18n="fact_1_label"></span><strong data-i18n="fact_1_value"></strong></div>
+          <div><span data-i18n="fact_2_label"></span><strong data-i18n="fact_2_value"></strong></div>
+          <div><span data-i18n="fact_3_label"></span><strong data-i18n="fact_3_value"></strong></div>
+        </div>
+      </div>
+      <div class="home-hero-visual reveal">
+        <figure class="hero-main"><img src="assets/hero-clipboard.webp" alt="NERV medical lab coat" /></figure>
+        <figure class="hero-side top"><img src="assets/black-scrub.jpg" alt="NERV black scrub" /></figure>
+        <figure class="hero-side bottom"><img src="assets/logo-story.webp" alt="NERV brand identity" /></figure>
+      </div>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <section class="brand-strip"><div class="brand-strip-track"><span>DETAILS IS OUR QUALITY</span><i></i><span>SPECIAL DESIGN</span><i></i><span>HIGH QUALITY CLOTH</span><i></i><span>NERV MEDICAL WEAR</span><i></i><span>DETAILS IS OUR QUALITY</span></div></section>
+
+  <section class="section container">
+    <div class="section-header split reveal">
+      <div><p class="eyebrow" data-i18n="featured_eyebrow"></p><h2 data-i18n="featured_title"></h2></div>
+      <p data-i18n="featured_lead"></p>
+    </div>
+    <div class="product-grid"><article class="product-card reveal" data-category="men">
+  <a class="product-media" href="product-men-black.html"><img src="assets/black-scrub.jpg" alt="" loading="lazy" /></a>
+  <div class="product-card-body">
+    <div><span class="product-type" data-i18n="cat_men"></span><h3 data-i18n="product_men_black"></h3><p data-i18n="product_men_black_short"></p></div>
+    <a class="circle-link" href="product-men-black.html" aria-label="View product">↗</a>
+  </div>
+</article><article class="product-card reveal" data-category="women">
+  <a class="product-media" href="product-women-rose.html"><img src="assets/pink-set.jpg" alt="" loading="lazy" /></a>
+  <div class="product-card-body">
+    <div><span class="product-type" data-i18n="cat_women"></span><h3 data-i18n="product_women_rose"></h3><p data-i18n="product_women_rose_short"></p></div>
+    <a class="circle-link" href="product-women-rose.html" aria-label="View product">↗</a>
+  </div>
+</article><article class="product-card reveal" data-category="women">
+  <a class="product-media" href="product-women-plum.html"><img src="assets/purple-set.webp" alt="" loading="lazy" /></a>
+  <div class="product-card-body">
+    <div><span class="product-type" data-i18n="cat_women"></span><h3 data-i18n="product_women_plum"></h3><p data-i18n="product_women_plum_short"></p></div>
+    <a class="circle-link" href="product-women-plum.html" aria-label="View product">↗</a>
+  </div>
+</article><article class="product-card reveal" data-category="labcoat">
+  <a class="product-media" href="product-men-labcoat.html"><img src="assets/hero-standing.webp" alt="" loading="lazy" /></a>
+  <div class="product-card-body">
+    <div><span class="product-type" data-i18n="cat_labcoat"></span><h3 data-i18n="product_men_labcoat"></h3><p data-i18n="product_men_labcoat_short"></p></div>
+    <a class="circle-link" href="product-men-labcoat.html" aria-label="View product">↗</a>
+  </div>
+</article></div>
+    <div class="section-cta"><a class="text-link" href="catalog.html" data-i18n="view_all_products"></a></div>
+  </section>
+
+  <section class="editorial-section">
+    <div class="container editorial-grid">
+      <div class="editorial-image reveal"><img src="assets/labcoat-back.webp" alt="NERV lab coat back details" /></div>
+      <div class="editorial-copy reveal">
+        <p class="eyebrow" data-i18n="quality_eyebrow"></p>
+        <h2 data-i18n="quality_title"></h2>
+        <p data-i18n="quality_lead"></p>
+        <div class="detail-list">
+          <div><span>01</span><p><strong data-i18n="quality_point_1"></strong><small data-i18n="quality_point_1_sub"></small></p></div>
+          <div><span>02</span><p><strong data-i18n="quality_point_2"></strong><small data-i18n="quality_point_2_sub"></small></p></div>
+          <div><span>03</span><p><strong data-i18n="quality_point_3"></strong><small data-i18n="quality_point_3_sub"></small></p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="campaign-layout">
+      <div class="campaign-copy reveal"><p class="eyebrow" data-i18n="campaign_eyebrow"></p><h2 data-i18n="campaign_title"></h2><p data-i18n="campaign_lead"></p><a class="button secondary" href="about.html" data-i18n="discover_brand"></a></div>
+      <div class="campaign-cards reveal"><img src="assets/poster-order-ar.webp" alt="NERV Arabic campaign" /><img src="assets/poster-order-en.webp" alt="NERV English campaign" /></div>
+    </div>
+  </section>
+
+  <section class="order-banner">
+    <div class="container order-banner-inner reveal"><div><p class="eyebrow" data-i18n="cta_eyebrow"></p><h2 data-i18n="cta_title"></h2><p data-i18n="cta_lead"></p></div><a class="button light" href="#" data-whatsapp data-i18n="start_order"></a></div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand footer-brand" href="index.html">
+        <img src="assets/logo-mark.jpg" alt="NERV logo" />
+        <span class="brand-copy"><strong>NERV</strong><small>Synapes Everything</small></span>
+      </a>
+      <p data-i18n="footer_statement"></p>
+    </div>
+    <div class="footer-links">
+      <a href="catalog.html" data-i18n="nav_catalog"></a>
+      <a href="about.html" data-i18n="nav_about"></a>
+      <a href="contact.html" data-i18n="nav_contact"></a>
+      <a href="https://www.instagram.com/nerv_scrubs/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <div class="footer-note">
+      <span data-i18n="based_in"></span>
+      <strong>Aleppo, Syria</strong>
+      <small>© 2026 NERV</small>
+    </div>
+  </div>
+</footer>
+<a class="floating-whatsapp" href="#" data-whatsapp aria-label="Order on WhatsApp"><span>WA</span><em data-i18n="whatsapp"></em></a>
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,45 +1,92 @@
 
-const toggle = document.getElementById('menuToggle');
-const nav = document.getElementById('siteNav');
-if (toggle) {
-  toggle.addEventListener('click', () => nav.classList.toggle('open'));
+const TRANSLATIONS = {"en": {"nav_home": "Home", "nav_catalog": "Catalog", "nav_about": "About", "nav_contact": "Contact", "order_now": "Order now", "whatsapp": "WhatsApp", "footer_statement": "Medical wear with a distinct visual identity, designed around quality, comfort, and confident details.", "based_in": "Based in", "home_eyebrow": "NERV / MEDICAL WEAR", "home_title": "A sharper uniform for modern medicine.", "home_lead": "NERV brings a deliberate, fashion-led approach to scrubs and lab coats. Clean silhouettes, confident colors, and details made to stand out through long days of study and work.", "explore_catalog": "Explore the catalog", "order_whatsapp": "Order on WhatsApp", "fact_1_label": "Core products", "fact_1_value": "Scrubs & lab coats", "fact_2_label": "Current sizes", "fact_2_value": "M · L · XL", "fact_3_label": "Brand promise", "fact_3_value": "Details is our Quality", "featured_eyebrow": "Featured collection", "featured_title": "The NERV collection.", "featured_lead": "This catalog turns the strongest pieces from the NERV feed into a clearer buying experience, without burying the product beneath unnecessary decoration. A rare outbreak of restraint on the internet.", "view_all_products": "View the full catalog →", "quality_eyebrow": "Designed in the details", "quality_title": "A professional uniform should feel considered, not generic.", "quality_lead": "NERV uses fit, fabric, pockets, collars, and clean finishing as visible parts of the design. The result is medical wear that remains practical while presenting a more refined image.", "quality_point_1": "Purposeful silhouettes", "quality_point_1_sub": "Cuts built around movement, long shifts, and a composed professional look.", "quality_point_2": "Distinctive details", "quality_point_2_sub": "Collars, concealed fronts, pockets, and finishing that give each piece its own character.", "quality_point_3": "A focused visual language", "quality_point_3_sub": "Black, white, plum, rose, and carefully controlled campaign styling.", "campaign_eyebrow": "Brand campaigns", "campaign_title": "A visual identity built around the product.", "campaign_lead": "High contrast, minimal typography, and the NERV neural mark create a visual system that feels technical, premium, and immediately recognizable.", "discover_brand": "Discover the brand", "cta_eyebrow": "Order with NERV", "cta_title": "Choose your model, size, and preferred color.", "cta_lead": "Send the product name through WhatsApp and confirm availability directly with the team.", "start_order": "Start your order", "catalog_eyebrow": "NERV CATALOG", "catalog_title": "The collection.", "catalog_lead": "Browse the current prototype collection. Product names and specifications can be replaced with official model names, prices, and inventory once confirmed.", "filter_all": "All products", "filter_men": "Men", "filter_women": "Women", "filter_labcoats": "Lab coats", "products_label": "products", "catalog_help_title": "Need help choosing a model?", "catalog_help_lead": "Send NERV a message with your preferred style and size.", "ask_whatsapp": "Ask on WhatsApp", "cat_men": "Men’s scrubs", "cat_women": "Women’s medical wear", "cat_labcoat": "Medical lab coat", "product_men_black": "Men’s Black Scrub", "product_men_black_short": "Clean V-neck scrub with a relaxed, confident fit.", "product_men_black_subtitle": "A minimal black set for daily clinical work.", "men_black_desc": "The black men’s scrub is the strongest expression of NERV’s minimal direction: clean lines, a practical pocket layout, and a relaxed silhouette that reads polished without feeling formal.", "men_black_f1": "V-neck top with a clean front.", "men_black_f2": "Chest pocket and practical trouser pockets.", "men_black_f3": "Relaxed shape designed for movement.", "men_black_f4": "Available in black; confirm current stock and sizing before ordering.", "product_women_rose": "Women’s Rose Scrub", "product_women_rose_short": "Soft color with a high collar and concealed front.", "product_women_rose_subtitle": "A refined women’s set in a warm rose tone.", "women_rose_desc": "This women’s scrub combines a softly structured collar, concealed placket, and practical pockets with a calm rose color. It is designed to feel distinct while remaining appropriate for everyday medical settings.", "women_rose_f1": "High collar with concealed front opening.", "women_rose_f2": "Short sleeves and comfortable movement.", "women_rose_f3": "Large angled front pockets.", "women_rose_f4": "Matching trousers with a practical rear pocket.", "product_women_plum": "Women’s Plum Medical Set", "product_women_plum_short": "Long-sleeve medical set with a deep plum identity.", "product_women_plum_subtitle": "A statement color with a polished long-sleeve cut.", "women_plum_desc": "The plum medical set brings a more distinctive color into the NERV collection while preserving a disciplined silhouette. The covered front, stand collar, and roomy pockets make the piece both practical and visually controlled.", "women_plum_f1": "Stand collar and concealed button placket.", "women_plum_f2": "Long sleeves for a more formal profile.", "women_plum_f3": "Large front pockets positioned for daily use.", "women_plum_f4": "Deep plum color designed as a signature look.", "product_men_labcoat": "Men’s Signature Lab Coat", "product_men_labcoat_short": "White medical coat with clean tailoring and practical detail.", "product_men_labcoat_subtitle": "A classic white coat interpreted through the NERV identity.", "labcoat_desc": "The signature men’s lab coat uses a crisp white finish, structured lapel, practical front pockets, and a back belt detail. It is presented as a professional piece rather than a disposable uniform.", "labcoat_f1": "Notched lapel and button-front construction.", "labcoat_f2": "Multiple front pockets for daily essentials.", "labcoat_f3": "Back belt detail for a more structured silhouette.", "labcoat_f4": "NERV label and branded finishing details.", "back_catalog": "← Back to catalog", "sizes": "Sizes", "price": "Price", "price_on_request": "On request", "product_details": "Product details", "order_box_text": "Send this model through WhatsApp to confirm color, size, availability, and price.", "order_this_product": "Order this product", "related_eyebrow": "More from NERV", "related_title": "Continue exploring the collection.", "about_eyebrow": "ABOUT NERV", "about_title": "Medical wear with a deliberate identity.", "about_lead": "NERV is a medical-wear brand based in Aleppo, building its identity around sharper styling, strong contrast, and visible attention to product details.", "story_eyebrow": "The direction", "story_title": "Technical, minimal, and intentionally premium.", "story_p1": "The neural mark and the “Synapes Everything” line give the brand a distinctive technical foundation. Black backgrounds, white typography, and restrained gold accents create a consistent campaign language.", "story_p2": "The products then add warmth through controlled colors such as rose and plum, while the white coats retain the clinical clarity expected from medical wear.", "value_1_title": "Quality first", "value_1_text": "The public brand message repeatedly emphasizes fabric, finishing, and the smallest construction details.", "value_2_title": "Professional presence", "value_2_text": "The collection is styled to help students and professionals look composed without sacrificing comfort.", "value_3_title": "Clear identity", "value_3_text": "The visual system avoids generic medical blues and greens in favor of a more recognizable black-led direction.", "contact_eyebrow": "ORDER & CONTACT", "contact_title": "A direct, simple ordering flow.", "contact_lead": "Choose a product, send its name through WhatsApp, and confirm size, color, price, and delivery with the NERV team.", "order_steps_title": "How to order", "step_1_title": "Choose the piece", "step_1_text": "Browse the catalog and open the product you prefer.", "step_2_title": "Send your size", "step_2_text": "Use the WhatsApp button and include your required size and color.", "step_3_title": "Confirm availability", "step_3_text": "The NERV team can confirm current stock, price, and delivery details.", "channels_eyebrow": "Contact channels", "channels_title": "Reach the brand directly.", "whatsapp_note": "Product orders and availability"}, "ar": {"nav_home": "الرئيسية", "nav_catalog": "الكتالوج", "nav_about": "عن NERV", "nav_contact": "تواصل معنا", "order_now": "اطلب الآن", "whatsapp": "واتساب", "footer_statement": "ألبسة طبية بهوية بصرية واضحة، مصممة حول الجودة والراحة والتفاصيل الواثقة.", "based_in": "الموقع", "home_eyebrow": "NERV / ألبسة طبية", "home_title": "زيّ طبي بهوية أوضح.", "home_lead": "تقدّم NERV السكربات والمراييل الطبية بروح أقرب إلى الأزياء العملية: قصّات نظيفة، ألوان واثقة، وتفاصيل مصممة لتظهر بشكل مميز خلال ساعات الدراسة والعمل الطويلة.", "explore_catalog": "استكشف الكتالوج", "order_whatsapp": "اطلب عبر واتساب", "fact_1_label": "المنتجات الأساسية", "fact_1_value": "سكرابات ومراييل", "fact_2_label": "المقاسات الحالية", "fact_2_value": "M · L · XL", "fact_3_label": "وعد العلامة", "fact_3_value": "التفاصيل هي جودتنا", "featured_eyebrow": "المجموعة المختارة", "featured_title": "مجموعة NERV.", "featured_lead": "يحوّل هذا الكتالوج أقوى المنتجات الظاهرة في صفحة NERV إلى تجربة شراء أوضح، دون دفن القطعة تحت زخرفة لا حاجة لها، وهي معجزة صغيرة في تصميم مواقع البشر.", "view_all_products": "شاهد الكتالوج كاملاً ←", "quality_eyebrow": "التصميم يبدأ من التفاصيل", "quality_title": "تفاصيل تُرى. وراحة ترافق يومك.", "quality_lead": "تعتمد NERV على القصّة، القماش، الجيوب، الياقات، ونظافة التشطيب كعناصر ظاهرة في التصميم. والنتيجة ألبسة طبية عملية بمظهر أكثر أناقة وحضوراً.", "quality_point_1": "قصّات مدروسة", "quality_point_1_sub": "تصاميم تراعي الحركة، ساعات العمل الطويلة، والمظهر المهني المتوازن.", "quality_point_2": "تفاصيل مميزة", "quality_point_2_sub": "ياقات، إغلاقات مخفية، جيوب، وتشطيبات تمنح كل قطعة شخصيتها الخاصة.", "quality_point_3": "لغة بصرية مركّزة", "quality_point_3_sub": "الأسود، الأبيض، البنفسجي، الوردي، وحملات بصرية منضبطة.", "campaign_eyebrow": "حملات العلامة", "campaign_title": "هوية بصرية مبنية حول المنتج.", "campaign_lead": "التباين القوي، الخطوط البسيطة، ورمز NERV العصبي يصنعون نظاماً بصرياً تقنياً وفاخراً وسهل التمييز.", "discover_brand": "اكتشف هوية العلامة", "cta_eyebrow": "اطلب من NERV", "cta_title": "اختر الموديل والمقاس واللون المناسب.", "cta_lead": "أرسل اسم المنتج عبر واتساب وتأكد من التوفر مباشرة مع الفريق.", "start_order": "ابدأ الطلب", "catalog_eyebrow": "كتالوج NERV", "catalog_title": "المجموعة.", "catalog_lead": "تصفّح المجموعة الحالية في هذا النموذج. يمكن لاحقاً استبدال الأسماء والمواصفات بأسماء الموديلات والأسعار والمخزون الرسمي بعد تأكيدها.", "filter_all": "كل المنتجات", "filter_men": "رجالي", "filter_women": "نسائي", "filter_labcoats": "مراييل طبية", "products_label": "منتجات", "catalog_help_title": "تحتاج مساعدة في اختيار الموديل؟", "catalog_help_lead": "أرسل لـ NERV التصميم والمقاس الذي تفضله.", "ask_whatsapp": "اسأل عبر واتساب", "cat_men": "سكرابات رجالية", "cat_women": "ألبسة طبية نسائية", "cat_labcoat": "مريول طبي", "product_men_black": "سكراب رجالي | أسود", "product_men_black_short": "سكراب بياقة V وقصّة مريحة وحضور واضح.", "product_men_black_subtitle": "طقم أسود بسيط للعمل السريري اليومي.", "men_black_desc": "يمثل السكراب الرجالي الأسود الاتجاه البسيط والأقوى في هوية NERV: خطوط نظيفة، توزيع عملي للجيوب، وقصّة مريحة تبدو مرتبة دون مبالغة.", "men_black_f1": "قميص بياقة V وواجهة نظيفة.", "men_black_f2": "جيب صدري وجيوب عملية في البنطال.", "men_black_f3": "قصّة مريحة مصممة للحركة.", "men_black_f4": "متوفر باللون الأسود؛ يرجى تأكيد المخزون والمقاس قبل الطلب.", "product_women_rose": "سكراب نسائي | وردي", "product_women_rose_short": "لون هادئ مع ياقة مرتفعة وإغلاق مخفي.", "product_women_rose_subtitle": "طقم نسائي أنيق بدرجة وردية دافئة.", "women_rose_desc": "يجمع هذا السكراب النسائي بين ياقة مرتفعة بهيكل خفيف، إغلاق أمامي مخفي، وجيوب عملية، مع لون وردي هادئ يمنحه شخصية مختلفة مع الحفاظ على ملاءمته لبيئة العمل الطبية.", "women_rose_f1": "ياقة مرتفعة مع فتحة أمامية مخفية.", "women_rose_f2": "أكمام قصيرة وحركة مريحة.", "women_rose_f3": "جيوب أمامية كبيرة ومائلة.", "women_rose_f4": "بنطال مطابق مع جيب خلفي عملي.", "product_women_plum": "طقم نسائي | بنفسجي", "product_women_plum_short": "طقم طويل الأكمام بلون بنفسجي عميق.", "product_women_plum_subtitle": "لون بارز مع قصّة طويلة الأكمام ومظهر مرتب.", "women_plum_desc": "يضيف الطقم الطبي البنفسجي لوناً أكثر جرأة إلى مجموعة NERV مع الحفاظ على قصّة منضبطة. الواجهة المخفية، الياقة المرتفعة، والجيوب الواسعة تجعل القطعة عملية وواضحة بصرياً.", "women_plum_f1": "ياقة مرتفعة وإغلاق أمامي مخفي.", "women_plum_f2": "أكمام طويلة لمظهر أكثر رسمية.", "women_plum_f3": "جيوب أمامية كبيرة للاستخدام اليومي.", "women_plum_f4": "لون بنفسجي عميق مصمم كإطلالة مميزة.", "product_men_labcoat": "مريول رجالي | أبيض", "product_men_labcoat_short": "مريول أبيض بتفصيل نظيف ووظائف عملية.", "product_men_labcoat_subtitle": "المريول الأبيض الكلاسيكي بلمسة NERV.", "labcoat_desc": "يعتمد المريول الطبي الرجالي على اللون الأبيض النظيف، ياقة مرتبة، جيوب أمامية عملية، وتفصيل خلفي بالحزام. يتم تقديمه كقطعة مهنية حقيقية، لا كزي مؤقت بلا شخصية.", "labcoat_f1": "ياقة كلاسيكية وإغلاق أمامي بالأزرار.", "labcoat_f2": "عدة جيوب أمامية للأدوات اليومية.", "labcoat_f3": "تفصيل حزام خلفي يمنح القصّة شكلاً أكثر ترتيباً.", "labcoat_f4": "ملصق NERV وتشطيبات خاصة بالعلامة.", "back_catalog": "العودة إلى الكتالوج ←", "sizes": "المقاسات", "price": "السعر", "price_on_request": "عند الطلب", "product_details": "تفاصيل المنتج", "order_box_text": "أرسل هذا الموديل عبر واتساب لتأكيد اللون والمقاس والتوفر والسعر.", "order_this_product": "اطلب هذا المنتج", "related_eyebrow": "المزيد من NERV", "related_title": "تابع استكشاف المجموعة.", "about_eyebrow": "عن NERV", "about_title": "ألبسة طبية بهوية مقصودة.", "about_lead": "NERV علامة ألبسة طبية في حلب تبني هويتها حول التصميم الأكثر حضوراً، التباين القوي، والاهتمام الواضح بتفاصيل المنتج.", "story_eyebrow": "اتجاه العلامة", "story_title": "تقني، بسيط، وفاخر بطريقة مقصودة.", "story_p1": "يمنح الرمز العصبي وعبارة “Synapes Everything” العلامة أساساً تقنياً مميزاً. الخلفيات السوداء، الكتابة البيضاء، واللمسات الذهبية المحدودة تصنع لغة حملات متناسقة.", "story_p2": "تضيف المنتجات دفئاً عبر ألوان مضبوطة مثل الوردي والبنفسجي، بينما تحافظ المراييل البيضاء على الوضوح الطبي المتوقع.", "value_1_title": "الجودة أولاً", "value_1_text": "تكرر رسالة العلامة التركيز على القماش والتشطيب وأصغر تفاصيل التصنيع.", "value_2_title": "حضور مهني", "value_2_text": "تم تصميم المجموعة لمساعدة الطلاب والعاملين على الظهور بشكل مرتب دون التضحية بالراحة.", "value_3_title": "هوية واضحة", "value_3_text": "يتجنب النظام البصري الألوان الطبية التقليدية لصالح اتجاه أسود أكثر تميزاً وسهولة في التذكر.", "contact_eyebrow": "الطلب والتواصل", "contact_title": "اطلب مباشرة من NERV.", "contact_lead": "اختر المنتج، أرسل اسمه عبر واتساب، ثم أكد المقاس واللون والسعر والتوصيل مع فريق NERV.", "order_steps_title": "طريقة الطلب", "step_1_title": "اختر القطعة", "step_1_text": "تصفّح الكتالوج وافتح المنتج الذي تفضله.", "step_2_title": "أرسل مقاسك", "step_2_text": "استخدم زر واتساب وأضف المقاس واللون المطلوبين.", "step_3_title": "أكد التوفر", "step_3_text": "يؤكد فريق NERV المخزون الحالي والسعر وتفاصيل التوصيل.", "channels_eyebrow": "قنوات التواصل", "channels_title": "تواصل مع العلامة مباشرة.", "whatsapp_note": "الطلبات وتأكيد التوفر"}};
+const WHATSAPP_NUMBER = '963941704798';
+const DEFAULT_MESSAGES = {
+  en: 'Hello NERV, I would like to ask about your medical wear collection.',
+  ar: 'مرحباً NERV، أريد الاستفسار عن مجموعة الألبسة الطبية.'
+};
+
+function applyLanguage(lang) {
+  const safeLang = TRANSLATIONS[lang] ? lang : 'en';
+  const dict = TRANSLATIONS[safeLang];
+  document.documentElement.lang = safeLang;
+  document.documentElement.dir = safeLang === 'ar' ? 'rtl' : 'ltr';
+  localStorage.setItem('nerv-language', safeLang);
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (dict[key] !== undefined) el.textContent = dict[key];
+  });
+  document.querySelectorAll('[data-lang-toggle]').forEach(btn => {
+    btn.textContent = safeLang === 'ar' ? 'EN' : 'AR';
+    btn.setAttribute('aria-label', safeLang === 'ar' ? 'Switch to English' : 'التبديل إلى العربية');
+  });
 }
 
-document.querySelectorAll('.site-nav a').forEach(link => {
-  link.addEventListener('click', () => nav.classList.remove('open'));
+function currentLanguage() { return localStorage.getItem('nerv-language') || 'en'; }
+applyLanguage(currentLanguage());
+
+document.querySelectorAll('[data-lang-toggle]').forEach(btn => {
+  btn.addEventListener('click', () => applyLanguage(currentLanguage() === 'ar' ? 'en' : 'ar'));
 });
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('visible');
-  });
-}, { threshold: 0.12 });
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-const lightbox = document.getElementById('lightbox');
-const lightboxImage = document.getElementById('lightboxImage');
-const lightboxClose = document.getElementById('lightboxClose');
-
-document.querySelectorAll('.look-card img, .campaign-card img, .collection-image img').forEach(img => {
-  img.addEventListener('click', () => {
-    lightboxImage.src = img.src;
-    lightboxImage.alt = img.alt;
-    lightbox.classList.add('open');
-    lightbox.setAttribute('aria-hidden', 'false');
-  });
-});
-
-function closeLightbox() {
-  lightbox.classList.remove('open');
-  lightbox.setAttribute('aria-hidden', 'true');
-  lightboxImage.src = '';
+const menuToggle = document.getElementById('menuToggle');
+const siteNav = document.getElementById('siteNav');
+if (menuToggle && siteNav) {
+  menuToggle.addEventListener('click', () => siteNav.classList.toggle('open'));
+  siteNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => siteNav.classList.remove('open')));
 }
 
-lightboxClose.addEventListener('click', closeLightbox);
-lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox) closeLightbox();
+function productDisplayName(productKey, lang) {
+  const map = {
+    'men-black': {en: 'Men’s Black Scrub', ar: 'السكراب الرجالي الأسود'},
+    'women-rose': {en: 'Women’s Rose Scrub', ar: 'السكراب النسائي الوردي'},
+    'women-plum': {en: 'Women’s Plum Medical Set', ar: 'الطقم الطبي النسائي البنفسجي'},
+    'men-labcoat': {en: 'Men’s Signature Lab Coat', ar: 'المريول الطبي الرجالي المميز'}
+  };
+  return map[productKey]?.[lang] || '';
+}
+
+document.querySelectorAll('[data-whatsapp]').forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    const lang = currentLanguage();
+    const productKey = link.dataset.productEn || document.body.dataset.productKey || '';
+    const productName = productDisplayName(productKey, lang);
+    const message = productName
+      ? (lang === 'ar' ? `مرحباً NERV، أريد طلب ${productName} والاستفسار عن المقاس والسعر والتوفر.` : `Hello NERV, I would like to order the ${productName} and confirm size, price, and availability.`)
+      : DEFAULT_MESSAGES[lang];
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+  });
 });
-window.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeLightbox();
+
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, {threshold: .1});
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+const filterButtons = document.querySelectorAll('[data-filter]');
+const catalogCards = document.querySelectorAll('.catalog-grid .product-card');
+const productCount = document.querySelector('[data-product-count]');
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    filterButtons.forEach(b => b.classList.remove('active'));
+    button.classList.add('active');
+    const filter = button.dataset.filter;
+    let visible = 0;
+    catalogCards.forEach(card => {
+      const show = filter === 'all' || card.dataset.category === filter;
+      card.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+    if (productCount) productCount.textContent = visible;
+  });
+});
+
+const galleryMain = document.getElementById('galleryMain');
+document.querySelectorAll('[data-gallery-src]').forEach(button => {
+  button.addEventListener('click', () => {
+    document.querySelectorAll('[data-gallery-src]').forEach(b => b.classList.remove('active'));
+    button.classList.add('active');
+    if (galleryMain) galleryMain.src = button.dataset.gallerySrc;
+  });
 });

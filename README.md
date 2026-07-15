@@ -1,17 +1,15 @@
-# NERV Branded Website Prototype
+# NERV Premium Catalog V3
 
-This is a static website prototype built from the supplied NERV Instagram brand assets.
+A static, bilingual Arabic/English multi-page product catalog for NERV medical wear.
 
-## Files
-- `index.html`
-- `styles.css`
-- `script.js`
-- `assets/` (included images)
+## Improvements in V3
+- Premium editorial layout with more whitespace and restrained typography
+- Arabic headings use IBM Plex Sans Arabic and a smaller, cleaner scale
+- Product images are displayed with `object-fit: contain` inside framed image stages, so the supplied photography is no longer aggressively cropped
+- Refined product cards, catalog grid, galleries, and WhatsApp ordering
 
-## Run locally
-Just open `index.html` in any browser.
+## Run
+Extract the ZIP and open `index.html`.
 
-## Notes
-- The site is based on the brand identity visible in the provided posts: black/white premium aesthetic with gold accents and editorial medical-wear photography.
-- The contact CTA currently points to the Instagram page.
-- If you later want WhatsApp, product prices, or an order form, they can be added easily.
+## WhatsApp number
+Edit `WHATSAPP_NUMBER` in `script.js` if needed.

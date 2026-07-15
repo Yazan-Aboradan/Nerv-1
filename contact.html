@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact NERV and order medical scrubs or lab coats." />
+  <title>Contact — NERV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="NERV home">
+      <img src="assets/logo-mark.jpg" alt="NERV logo" />
+      <span class="brand-copy"><strong>NERV</strong><small>Synapes Everything</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    <nav class="site-nav" id="siteNav"><a class="" href="index.html" data-i18n="nav_home"></a><a class="" href="catalog.html" data-i18n="nav_catalog"></a><a class="" href="about.html" data-i18n="nav_about"></a><a class="active" href="contact.html" data-i18n="nav_contact"></a></nav>
+    <div class="header-actions">
+      <button class="lang-toggle" data-lang-toggle type="button">AR</button>
+      <a class="header-order" href="#" data-whatsapp data-i18n="order_now"></a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="page-hero compact"><div class="container page-hero-inner reveal"><p class="eyebrow" data-i18n="contact_eyebrow"></p><h1 data-i18n="contact_title"></h1><p data-i18n="contact_lead"></p></div></section>
+  <section class="section container contact-grid">
+    <div class="contact-panel reveal">
+      <h2 data-i18n="order_steps_title"></h2>
+      <ol class="order-steps">
+        <li><span>1</span><div><strong data-i18n="step_1_title"></strong><p data-i18n="step_1_text"></p></div></li>
+        <li><span>2</span><div><strong data-i18n="step_2_title"></strong><p data-i18n="step_2_text"></p></div></li>
+        <li><span>3</span><div><strong data-i18n="step_3_title"></strong><p data-i18n="step_3_text"></p></div></li>
+      </ol>
+      <a class="button primary full" href="#" data-whatsapp data-i18n="order_whatsapp"></a>
+    </div>
+    <div class="contact-panel image-panel reveal"><img src="assets/purple-set.webp" alt="NERV purple medical set" /></div>
+    <div class="contact-panel reveal"><p class="eyebrow" data-i18n="channels_eyebrow"></p><h2 data-i18n="channels_title"></h2><div class="channel-list"><a href="#" data-whatsapp><strong>WhatsApp</strong><span data-i18n="whatsapp_note"></span></a><a href="https://www.instagram.com/nerv_scrubs/" target="_blank" rel="noopener"><strong>Instagram</strong><span>@nerv_scrubs</span></a></div></div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand footer-brand" href="index.html">
+        <img src="assets/logo-mark.jpg" alt="NERV logo" />
+        <span class="brand-copy"><strong>NERV</strong><small>Synapes Everything</small></span>
+      </a>
+      <p data-i18n="footer_statement"></p>
+    </div>
+    <div class="footer-links">
+      <a href="catalog.html" data-i18n="nav_catalog"></a>
+      <a href="about.html" data-i18n="nav_about"></a>
+      <a href="contact.html" data-i18n="nav_contact"></a>
+      <a href="https://www.instagram.com/nerv_scrubs/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <div class="footer-note">
+      <span data-i18n="based_in"></span>
+      <strong>Aleppo, Syria</strong>
+      <small>© 2026 NERV</small>
+    </div>
+  </div>
+</footer>
+<a class="floating-whatsapp" href="#" data-whatsapp aria-label="Order on WhatsApp"><span>WA</span><em data-i18n="whatsapp"></em></a>
+<script src="script.js"></script>
+</body>
+</html>
